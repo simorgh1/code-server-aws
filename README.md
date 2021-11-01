@@ -90,3 +90,5 @@ After first startup, following recommended extensions could be installed:
 - Indent Rainbow
 - Markdown Preview
 - YAML
+- Python
+- Pylance
