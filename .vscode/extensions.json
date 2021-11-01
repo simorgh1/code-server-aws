@@ -14,7 +14,6 @@
     "sirtori.indenticator",
     "kddejong.vscode-cfn-lint",
     "actboy168.tasks",
-    "ms-python.vscode-pylance",
     "ms-python.python"
   ]
 }

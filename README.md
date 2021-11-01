@@ -1,4 +1,4 @@
-# Code Server for aws
+# Code Server for aws workspace
 
 ![Visits Badge](https://badges.pufler.dev/visits/simorgh1/code-server-aws)
 [![GitHub license](https://img.shields.io/github/license/simorgh1/code-server-aws)](https://github.com/simorgh1/code-server-aws/blob/master/LICENSE)
@@ -20,7 +20,7 @@ When browsing a GitHub repository, by entering the **.** key, a web based vscode
 
 ## Code Server vs vscode.dev
 
-If you open [vscode.dev](https://vscode.dev/), you could open a github repository or pull request and start working on it. Similar issues as in the GitHub web editor, not all extensions a re supported and there is no terminal. vscode.dev could be used for example for joining a [liveShare session](https://code.visualstudio.com/learn/collaboration/live-share) in web, which is very useful. Just click on the liveShare link you received and join in vscode.dev or if you are working with local vscode and already installed liveShare extension, join in your vscode.
+If you open [vscode.dev](https://vscode.dev/), you could open a github repository or pull request and start working on it. Similar issues as in the GitHub web editor, not all extensions a re supported and there is no terminal. vscode.dev could be used for example for joining a [liveShare session](https://code.visualstudio.com/learn/collaboration/live-share) in web, which is very useful. Just click on the liveShare link you received and join in vscode.dev or if you are working with local vscode and already installed [liveShare extension](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare), join in your vscode.
 
 ## Why Code Server
 
@@ -91,4 +91,7 @@ After first startup, following recommended extensions could be installed:
 - Markdown Preview
 - YAML
 - Python
-- Pylance
+
+# Feedback
+
+If you have any questions using the Code Server for aws workspace, contact me by my twitter/linkedin provided above.
