@@ -17,12 +17,13 @@ fi
 CONTAINERHOME="/home/coder"
 TLS=${1:-""}
 BINDPORT=${1:-"8080"}
+AWS_DEFAULT_REGION="us-east-1"
 
 # Build with additional aws toolset
 
-docker build -t my/code-server-aws \
+docker build -t my/code-server-aws:latest \
 	--pull \
-	--label "name=my/code-server-aws:1.0.0" \
+	--label "Name=my/code-server-aws:1.0.0" \
 	-f .docker/Dockerfile .
 
 # Run customizd code-server
@@ -35,6 +36,9 @@ else
 	Binding="-p 127.0.0.1:${BINDPORT}:${BINDPORT} --env BindAddress=0.0.0.0:${BINDPORT}"
 fi
 
+# local cache for code-server installation
+# aws profile mount with default region
+# user git configuration mount
 docker run -it --rm \
 	--name code-server-aws \
 	--hostname code-server-aws \
@@ -43,7 +47,7 @@ docker run -it --rm \
 	-v "$HOME/.local/share/code-server:$CONTAINERHOME/.local/share/code-server" \
 	-v "$HOME/.aws:$CONTAINERHOME/.aws:ro" \
 	-v "$HOME/.gitconfig:$CONTAINERHOME/.gitconfig:ro" \
-	-e "AWS_DEFAULT_REGION=us-east-1" \
+	-e "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION" \
 	-w "$CONTAINERHOME/project" \
 	-u "$(id -u):$(id -g)" \
 	-e "DOCKER_USER=$USER" \
