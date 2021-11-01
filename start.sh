@@ -19,14 +19,10 @@ BINDPORT=${1:-"8080"}
 
 # Build with additional toolset
 
-docker build -t my/code-server-aws \
-	     -f .docker/Dockerfile \
-	     --pull \
-	     --label "name=my/code-server-aws:1.0.0" .
-
-# Scan build, docker login required
-
-# docker scan --accept-license -f .docker/Dockerfile my/code-server
+docker build -t my/code-server-aws \ 
+	-f .docker/Dockerfile \
+	--pull \
+	--label "name=my/code-server-aws:1.0.0" .
 
 # Run customizd code-server
 
@@ -43,6 +39,6 @@ docker run -it --rm \
 	-w "$CONTAINERHOME/project" \
 	-u "$(id -u):$(id -g)" \
 	-e "DOCKER_USER=$USER" \
-        -e "BindAddress=0.0.0.0:${BINDPORT}" \
+    -e "BindAddress=0.0.0.0:${BINDPORT}" \
 	my/code-server-aws:latest
 	
