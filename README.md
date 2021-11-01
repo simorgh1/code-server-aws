@@ -39,7 +39,7 @@ This example, adds aws related tools like aws cli, cloudFormation linter and con
 Clone the repo, and configure you aws account, make sure docker already running, then start the local container using:
 
 ```bash
-$ code-server-aws/ ./start.sh
+code-server-aws/$ ./start.sh
 ```
 
 It will build custom code server docker image, which has aws cli and cloudformation helper tools, after that it runs the container and mounts the local folder as project folder. Then you could start working on project by opening http://localhost:8080/ folder, password to be find in local .config folder.
@@ -47,28 +47,27 @@ It will build custom code server docker image, which has aws cli and cloudformat
 If you want to run in a different port, give the new port as arg to start script:
 
 ```bash
-$ code-server-aws/ ./start.sh 8099
+code-server-aws/$ ./start.sh 8099
 ```
 
 ### Starting with tls
 
 You might also want to start code server with tls. Then use the following command:
 
-
 ```bash
-$ code-server-aws/ ./start.sh tls
+code-server-aws/$ ./start.sh tls
 ```
 
 This will start Code Server with a random port and https, then it will use GitHub as your identity provider. The project will be available with a custom domain like:
 
 ```bash
-	https://code_server_aws-$YOURGITHUBUSER.cdr.co/
+https://code_server_aws-$YOURGITHUBUSER.cdr.co/
 ```
 
 Let say you authenticate to your GitHub account with max as GitHub user, then your custom account will be for the repo **code-server-aws**:
 
 ```bash
-	https://code_server_aws-max.cdr.co/
+https://code_server_aws-max.cdr.co/
 ```
 
 And this from anywhere, even from your ipad, I tested with MacBook air m1 and Safari browser, Windows 11 Chrome and Edge browsers.
