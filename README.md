@@ -62,11 +62,11 @@ code-server-aws/$ ./start.sh tls
 
 This will start Code Server with a random port and https, then it will use GitHub as your Identity Provider. The project will be available with a custom domain like "https://code_server_aws-$YOURGITHUBUSER.cdr.co/".
 
-Let say you authenticated to your GitHub account with "max" as GitHub user, then your custom domain for the repository **code-server-aws** will be ""https://code_server_aws-max.cdr.co/.
+Let say you authenticated to your GitHub account with "max" as GitHub user, then your custom domain for the repository **code-server-aws** will be "https://code_server_aws-max.cdr.co/".
 
 And use it from anywhere, even from your iPad, I've tested with MacBook air m1 and Safari browser, Windows 11 Chrome and Edge browsers.
 
-Hint: It might be, that by opening the page in Safari, the integrated terminal does not show any thing, then open settings, enter "gpu", and set **gpuAcceleration** to off.
+> Hint: It might be, that by opening the page in Safari, the integrated terminal does not show any thing, then open settings, enter "gpu", and set **gpuAcceleration** to off.
 
 After first startup, following extensions are recommended to be installed:
 
